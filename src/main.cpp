@@ -11,7 +11,6 @@
 SMS_STS st;
 SCSCL sc;
 
-
 #define S_RXD 18
 #define S_TXD 19
 
@@ -21,11 +20,9 @@ SCSCL sc;
 #define RGB_LED   23
 #define NUMPIXELS 10
 
-const float L1 = 120.0;  
-const float L2 = 120.0;  
-const float DEADZONE = 0.1;
+const float L1 = 115.0;  
+const float L2 = 115.0;  
 
-// Fixed variable names to match usage
 const float l1 = L1;
 const float l2 = L2;
 
@@ -48,7 +45,7 @@ struct Point3D {
     float x;
     float y;
     float z;
-};
+}; 
 
 // Definicje przycisków PS4
 #define PS4_TRIANGLE PS4_BUTTON_TRIANGLE
@@ -65,6 +62,7 @@ float current_x = initial_x;
 float current_z = initial_z;
 int base_position = 2048; // Center position (0-4095 range)
 int base_speed = 500;
+const float DEADZONE = 0.1;
 const float STEP_SIZE = 2.0;
 
 // Button state tracking
